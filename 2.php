@@ -7,4 +7,3 @@ function isPalindrome($x) {
 }
 
 var_dump(isPalindrome(121));
-echo 121 % 10;
