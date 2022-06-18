@@ -1,1 +1,19 @@
 <?php
+# https://leetcode.com/problems/happy-number/
+
+function isHappy($n) {
+	if ($n === 1 || $n === 7) return true;
+	while($n >= 9) {
+		$sum = 0;
+		$x = $n;
+		while ($x > 0){
+			$sum += pow($x % 10, 2);
+			$x = floor($x / 10);
+		}
+		if ($sum === 1 || $sum === 7) return true;
+		$n = $sum;
+	}
+	return false;
+}
+
+var_dump(isHappy(1));
